@@ -171,6 +171,10 @@ a{
     text-align:center;
     margin:1rem 0;
 }
+.button--stretched{
+   padding-left:6rem;
+   padding-right:6rem; 
+}
 .button--block{
     width:100%;
     display:inline-block;
@@ -419,4 +423,38 @@ color:white;
     justify-content:center;
     align-items:center;
   }
+}
+/* Callouts */
+.callout{
+    padding:4rem;
+    border-radius:5px;
+}
+.callout--primary{
+    background:var(--color-primary);
+    color:#fff;
+}
+.callout__heading{
+    color:#fff;
+    margin-top:0;
+    font-size:3rem;
+}
+.callout .button{
+    justify-self:center;
+    align-self:center;
+}
+.callout__content{
+    text-align:center;
+}
+@media screen and (min-width:768px){
+    .callout .grid--1x2{
+        grid-template-columns:1fr auto;
+    }
+    .callout__content{
+        text-align:left;
+    }
+
+    .callout .button{
+        justify-self:start;
+        margin:0 2rem;
+    }
 }
