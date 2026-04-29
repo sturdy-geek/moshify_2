@@ -114,7 +114,6 @@ a{
 }
 /* Lists */
 .list{
-   
     list-style:none;
     padding-left:0;
 }
@@ -232,7 +231,7 @@ background:#3a8ffd;
 /* Inputs */
 .input{
     padding:1.5rem 3.5rem;
-    border:1px solid var(--color-border);
+    border:1px solid #393939; solid var(--color-border);
     border-radius:var(--border-radius);
     outline:0;
     color:var(--color-headings);
@@ -243,7 +242,7 @@ background:#3a8ffd;
 }
 
 .input-group{
-    border:1px solid var(--color-border);
+    border:1px solid #393939; solid var(--color-border);
     border-radius:var(--border-radius);
     display:flex;
 }
@@ -285,14 +284,7 @@ color:white;
 .card--secondary .badge--secondary{
     background:#02cdf1;
 }
-/* @media screen and (max-width:375px){
-  .card{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-  }
-} */
+
 /* Plans */
 .plan{
 transition:transform .2s  ease-out;
@@ -319,7 +311,7 @@ transition:transform .2s  ease-out;
 .plan__description {
   font-size: 2rem;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 1px solid #393939;;
   display: block;
 }
 
@@ -541,6 +533,10 @@ opacity:1;
     background:#000;
     color:#7b858b;
 }
+.block--dark .nav__item>a{
+        color:#7b858b;
+
+}
 .block--dark h1,
 .block--dark h2,
 .block--dark h3{
@@ -574,7 +570,7 @@ opacity:1;
 
 .nav__item{
     padding:0.5rem 2rem;
-    border-bottom:1px solid #222;
+    border-bottom:1px solid #393939; solid #222;
 }
 
 .nav__item>a{
@@ -619,7 +615,7 @@ opacity:1;
 .hero__tagline{
     font-size:2rem;
     color:#b9c3cf;
-    letter-spacing:1px;
+    letter-spacing:1px solid #393939;;
     margin:2rem 0 5rem;
 }
 .hero__image{
@@ -692,10 +688,7 @@ margin:1rem 0;
 .block-showcase__image > img{
     width:100%;
 }
-/* .showcase__content{
-    display:flex;
-    flex-direction: column;
-} */
+
  @media screen and (min-width:768px){
     .block-showcase .grid{
         grid-template-columns:50% 50%;
@@ -709,3 +702,67 @@ margin:1rem 0;
         max-width:700px;
     }
  }
+/* Footer */
+.footer{
+    background:#232323;
+}
+.footer a{
+    color:#777;
+    transition:color .3s;
+}
+.footer a:hover{
+color:#fff;
+}
+.footer__section{
+    padding:2rem;
+    border-bottom:1px solid #393939;
+}
+.footer__heading{
+text-transform:uppercase;
+font-weight:6rem;
+}
+.footer__brand{
+    margin-top:5rem;
+    text-align:center;
+}
+.footer__brand img{
+    /* TODO: Consider refactoring this and apply this to all images */
+    width:100%;
+    max-width:230px;
+}
+.footer__copyright{
+    font-size:2.1rem;
+    color:#fff;
+    opacity:.3;
+
+}
+@media screen and (min-width:768px){
+    .footer__sections{
+     grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));
+
+    }
+    .footer .collapsible__chevron{
+        display:none;
+    }
+    .footer .collapsible__content{
+        opacity:1;
+        max-height:100%;
+    }
+.footer__brand{
+    order:-1;
+    margin-top:1rem;
+}
+.footer__copyright{
+    font-size:1.5rem;
+}
+.footer__section{
+    border:0;
+}
+.footer__section .list{
+    margin:0;
+}
+
+.footer__heading{
+    font-size:1.6rem;
+}
+}
