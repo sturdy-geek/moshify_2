@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+  "engines": {
+    "node": "16.x"
   },
-  "engines":{
-    "node":"16.x"
+  "devDependencies": {
+    "parcel": "^2.16.4"
   }
 }
